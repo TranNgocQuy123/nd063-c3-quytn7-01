@@ -1,8 +1,12 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+Adding WAF and CloudFront Service in front of the load balancer. Base on WAF service, it will deny any attach to ALB. Or Allow from prefix IP cloudfront to deny attach to ALB.
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+Using VPC s3 endpoints alone would not prevent the unauthorized access to the secrets bucket.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, only new object by modification.
 
 # What would happen if the original cloud formation templates are applied to this environment.
+We will reset the CloudFormation template and change it.
