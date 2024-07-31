@@ -1,5 +1,7 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 From findings of GuardDuty, It is detected by Finding type:  UnauthorizedAccess:EC2/SSHBruteForce
+Description: ec2-44-193-111-182.compute-1.amazonaws.com is performing SSH brute force attacks against Web Service Instance - C3. Brute force attacks are used to unauthorized access to instance by guessing the SSH password
+
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
 From document: https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html
 To detect unauthorized and unexpected activity in AWS environment. There are two primary details that determine what kind of information is available for any finding. The first is the resource type, which can be Instance, AccessKey, S3Bucket, S3Object, Kubernetes cluster, ECS cluster, Container, RDSDBInstance, or Lambda. The second detail that determines finding information is Resource Role. Resource role can be Target for access keys, meaning the resource was the target of suspicious activity.
