@@ -1,3 +1,15 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+1. CloudTrail Trail is not specified.
+2. Loadbalancer does not have from http to https redirection
+3. EC2 Security group is allow all ingress from anywhere in internet
+4. Port 5000/TCP is reachable from the internet.
+5. Using a non-root account is not enforced MFA.
+6. Logging is not enabled for S3 buckets.
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+1. Create a CloudTrail that is stored on S3 bucket.
+2. Set IAM Policy to force MFA and specific permissions
+3. Config ALB to redirect from http to https
+4. Enable logging for S3 Bucket.
+5. Limit access with port on the EC2.
+6. Set MFA for root user
